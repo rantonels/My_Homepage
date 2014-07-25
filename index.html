@@ -1,0 +1,61 @@
+<!DOCTYPE HTML>
+	<html>
+		<head>
+			<title>New tab</title>
+			<link rel="stylesheet" href="style.css" type="text/css" />
+			<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+			<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+		</head>
+		<body>
+			<div class="searchContainer">
+				<form class="searchForm" method="get" target="_blank" action="https://google.com/search">
+					<input class="searchBar google" type="text" name="q" placeholder="Google search" />
+				</form>
+			</div>
+			<ul class="border">
+				<li><a class="parent1" href="#">Example</a>
+					<ul class="subMenu">
+						<li><a class="tab1" href="#">Example</a></li>
+						<li><a class="tab1" href="#">Example</a></li>
+						<li><a class="tab1" href="#">Example</a></li>
+					</ul>
+				</li>
+				<li><a class="parent2" href="#">Example</a>
+					<ul class="subMenu">
+						<li><a class="tab2" href="#">Example</a></li>
+						<li><a class="tab2" href="#">Example</a></li>
+					</ul>				
+				</li>
+				<li><a class="parent3" href="#">Example</a>
+					<ul class="subMenu">
+						<li><a class="tab3" href="#">Example</a></li>
+						<li><a class="tab3" href="#">Example</a></li>
+						<li><a class="tab3" href="#">Example</a></li>
+						<li><a class="tab3" href="#">Example</a></li>
+						<li><a class="tab3" href="#">Example</a></li>
+					</ul>
+				</li>
+				<li><a class="parent4" href="#">Example</a>
+					<ul class="subMenu">
+						<li><a class="tab4" href="#">Example</a></li>
+						<li><a class="tab4" href="#">Example</a></li>
+					</ul>
+				</li>
+				<li><a class="parent5" href="#">Example</a>
+					<ul class="subMenu">
+						<li><a class="tab5" href="#">Example</a></li>
+						<li><a class="tab5" href="#">Example</a></li>
+						<li><a class="tab5" href="#">Example</a></li>
+						<li><a class="tab5" href="#">Example</a></li>
+						<li><a class="tab5" href="#">Example</a></li>
+					</ul>
+				</li>
+			</ul>
+				<script>
+					$('.subMenu').hide();
+					$("li:has(ul)").click(function(){
+					$("ul",this).slideToggle('slow');
+					});
+				</script>
+		</body>
+	</html>
