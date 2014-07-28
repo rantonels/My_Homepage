@@ -3,7 +3,7 @@ html {
 }
 
 body {
-	background: url('bg.png');
+    background-color: #b0c4de;
     margin: 0;
     padding: 0;
 	font-family: sans-serif;
@@ -45,7 +45,7 @@ a.parent4 {background: #222;transition: all .3s ease;}
 a.parent5 {background: #222;transition: all .3s ease;}
 
 a.tab1 {background: #336666;transition: all .3s ease;}
-a.tab2 {background: #663333;transition: all .3s ease;}
+a.tab2 {background: #57606C;transition: all .3s ease;}
 a.tab3 {background: #336633;transition: all .3s ease;}
 a.tab4 {background: #663366;transition: all .3s ease;}
 a.tab5 {background: #666633;transition: all .3s ease;}
