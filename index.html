@@ -4,44 +4,88 @@
 			<title>New tab</title>
 			<link rel="stylesheet" href="style.css" type="text/css" />
 			<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
-			<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+
+			<script src="file:///home/riccardo/jquery/jquery.min.js"></script>
+
+			<SCRIPT>
+				function gotoURL(){
+				  var newURL = "http://reddit.com/r/"+document.smartForm.smartInput.value
+				  document.location.href=newURL
+				  return false;
+				  };
+			</SCRIPT>
+
+
 		</head>
 		<body>
+
+			  <script type="text/javascript" src="suncalc/suncalc.js" charset="UTF-8"></script>
+			  <script type="text/javascript" src="moon-phase.js" charset="UTF-8"></script>
+			  <!--<script type="text/javascript" src="riset.js" charset="UTF-8"></script>--!>
+			  <!--<script type="text/javascript" src="zodiac.js" charset="UTF-8"></script>--!>
+
+
+
+
 			<div class="searchContainer">
-				<form class="searchForm" method="get" target="_blank" action="http://google.com/search">
-					<input class="searchBar google" type="text" name="q" placeholder="Google search"/>
+				<form class="searchForm" method="get" action="http://google.com/search">
+					<input class="searchBar google" type="text" name="q" placeholder="Google search" autofocus/>
 				</form>
 			</div>
+			
 			<ul class="border">
+				<div class="mooncont">
+					
+					<svg id="moon" class="moonsvg" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" version="1.1">
+					<!--<path d="m100,0 a20,20 0 1,1 0,150 a20,20 0 1,1 0,-150" class="moonback"></path>--!>
+	     <!--<path d="m100,0 a19.973301571132716,20 0 1,0 0,150 a20,20 0 1,1 0,-150" class="moon"></path>--!>
+					</svg>
+
+				</div>
+				
 				<li><a class="parent1" href="#">Social</a>
 					<ul class="subMenu">
 						<li><a class="tab1" href="http://facebook.com">Facebook</a></li>
 						<li><a class="tab1" href="http://boards.4chan.org/b/">/b/</a></li>
 					</ul>
 				</li>
+				
 				<li><a class="parent2" href="#">Reddit</a>
 					<ul class="subMenu">
+						<li><a class="tab2" href="https://reddit.com/">Frontpage</a></li>
 						<li><a class="tab2" href="https://reddit.com/r/physics">Physics</a></li>
-						<li><a class="tab2" href="https://reddit.com/r/unixporn">Unix Porn</a></li>
-						<li><a class="tab2" href="https://reddit.com/r/startpages">Startpages</a></li>
+						<li><a class="tab2" href="https://reddit.com/r/cringe">Cringe</a></li>
+						<li><a class="tab2" href="https://reddit.com/r/youtubehaiku">Youtube Haiku</a></li>
 					</ul>				
 				</li>
-				<li><a class="parent3" href="#">Programming</a>
-					<ul class="subMenu">
+				
+				<li><a class="parent3" href="https://github.com">Github</a>
+				<!--	<ul class="subMenu">
 						<li><a class="tab3" href="https://stackoverflow.com">Stack Overflow</a></li>
 						<li><a class="tab3" href="https://github.com">Github</a></li>
+						</ul>		--!>
+				</li>
+				
+				<li><a class="parent4" href="https://youtube.com">Youtube</a>
+				</li>
+
+				<li><a class="parent5" href="#">Personal Pages</a>
+					<ul class="subMenu">
+						<li><a class="tab5" href="http://spiro.fisica.unipd.it/~antonell">~antonell @ spiro</a></li>
+						<li><a class="tab5" href="http://monolith.ngrok.com">monolith.ngrok.com</a></li>
+						<li><a class="tab5" href="http://monolith.local">monolith.local</a></li>
+						<li><a class="tab5" href="http://sasberry.ngrok.com">sasberry.ngrok.com</a></li>
+						<li><a class="tab5" href="http://sasberrypi.local">sasberrypi.local</a></li>
+						<li><a class="tab5" href="#">Do nothing</a></li>
+
 					</ul>
-				</li>
-				<li><a class="parent4" href="#">EMPTY</a>
-				</li>
-				<li><a class="parent5" href="#">EMPTY</a>
 			
 				</li>
 			</ul>
 				<script>
 					$('.subMenu').hide();
 					$("li:has(ul)").click(function(){
-					$("ul",this).slideToggle('slow');
+					$("ul",this).slideToggle('fast');
 					});
 				</script>
 		</body>
